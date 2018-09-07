@@ -1,0 +1,78 @@
+<%
+'Method -> One formatting Output(February 16, 2010)
+'===============================================
+Function myDateFormat(myDate)
+    d = WhatEver(Day(myDate))
+    m = WhatEver(MonthName(Month(myDate)))    
+    y = Year(myDate)
+    myDateFormat= m & " " & d & ", " & y
+End Function
+
+Function WhatEver(num)
+    If(Len(num)=1) Then
+        WhatEver="0"&num
+    Else
+        WhatEver=num
+    End If
+End Function
+
+'Method 2 -> Formating Output(Feb 16, 2010) 
+'============================================
+Function myDateFormat(myDate)
+    d = WhatEver(Day(myDate))
+    m = WhatEver(MonthName(Month(myDate),1))    
+    y = Year(myDate)
+    myDateFormat= m & " " & d & ", " & y
+End Function
+
+Function WhatEver(num)
+    If(Len(num)=1) Then
+        WhatEver="0"&num
+    Else
+        WhatEver=num
+    End If
+End Function
+
+'Method 3 -> Formatting Output(02-16-2010)
+'===========================================
+Function myDateFormat(myDate)
+    d = WhatEver(Day(myDate))
+    m = WhatEver(Month(myDate))    
+    y = Year(myDate)
+    myDateFormat= m & "-" & d & "-" & y
+End Function
+
+Function WhatEver(num)
+    If(Len(num)=1) Then
+        WhatEver="0"&num
+    Else
+        WhatEver=num
+    End If
+End Function
+
+'Method 4 -> Formatting Output(Sat February 16, 2010)
+'=================================================
+Function myDateFormat(myDate)
+    w = WhatEver(WeekDayName(WeekDay(Now()),1))
+    d = WhatEver(Day(myDate))
+    m = WhatEver(MonthName(Month(myDate)))    
+    y = Year(myDate)
+    myDateFormat= w & " " & m & " " & d & ", " & y
+End Function
+
+Function WhatEver(num)
+    If(Len(num)=1) Then
+        WhatEver="0"&num
+    Else
+        WhatEver=num
+    End If
+End Function
+
+'====== end method ========
+
+
+d = myDateFormat("2010-04-16 13:45")
+
+response.write(d)
+
+%>
