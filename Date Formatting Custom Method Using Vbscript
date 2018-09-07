@@ -1,4 +1,6 @@
 <%
+'Md.Faisal Porag
+
 'Method -> One formatting Output(February 16, 2010)
 '===============================================
 Function myDateFormat(myDate)
