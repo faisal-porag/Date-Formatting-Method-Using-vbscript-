@@ -1,8 +1,13 @@
 <%
 'Md.Faisal Porag
 
+'Today's Date Output(September 8, 2018)
+'=========================================
+Response.Write MonthName(Month(Now())) & " " & Day(Now()) & ", " & Year(Now()) 
+
+'****************************************************
 'Method -> One formatting Output(February 16, 2010)
-'===============================================
+'====================================================
 Function myDateFormat(myDate)
     d = WhatEver(Day(myDate))
     m = WhatEver(MonthName(Month(myDate)))    
